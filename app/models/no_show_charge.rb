@@ -1,4 +1,5 @@
 class NoShowCharge < ApplicationRecord
+  belongs_to :booking
 
   DEFAULT_PRICE = 15
 

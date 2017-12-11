@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20161018070158) do
     t.datetime "starts_at"
     t.integer  "duration_in_minutes"
     t.string   "description"
-    t.string   "studio_name"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

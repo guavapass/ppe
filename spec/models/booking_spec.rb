@@ -72,6 +72,20 @@ RSpec.describe Booking, type: :model do
     #   end
     # end
 
+    # context "lesson happened before the 5th of the current month and is within the no show window" do
+    #   before { Timecop.freeze(Date.new(2016,10,6)) }
+    #   after { Timecop.return }
+
+    #   let(:lesson) { create(:lesson, starts_at: Date.new(2016,10,3).to_time) }
+    #   let(:booking) { create(:booking, status: "completed", lesson: lesson) }
+
+    #   it "creates a billing adjustment" do
+    #     expect {
+    #       subject
+    #     }.to change { BillingAdjustment.count }.from(0).to(1)
+    #   end
+    # end
+
     # context "lesson happened before the 5th of the current month" do
     #   before { Timecop.freeze(Date.new(2016,10,6)) }
     #   after { Timecop.return }
@@ -82,7 +96,7 @@ RSpec.describe Booking, type: :model do
     #   it "creates a billing adjustment" do
     #     expect {
     #       subject
-    #     }.to change { BillingAdjustment.count }.from(0).to(1)
+    #     }.to_not change { BillingAdjustment.count }
     #   end
     # end
 
